@@ -21,6 +21,7 @@ img {
 .hero {
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     background-image: url(images/back-image.png);
     background-position: center;
     background-size: cover;
@@ -215,6 +216,7 @@ nav ul li a {
     .hero {
         padding: 10px 5%;
         min-height: 100vh;
+        min-height: 100dvh;
     }
 
     nav {
@@ -284,6 +286,7 @@ nav ul li a {
 
     .hero {
         min-height: 100vh;
+        min-height: 100dvh;
         padding: 15px 6%;
         background-position: center;
     }
@@ -330,7 +333,7 @@ nav ul li a {
     /* Hero content */
 
     .content {
-        margin-top: 12%;
+        margin-top: 8%;
         max-width: 100%;
         text-align: center;
     }
@@ -341,7 +344,7 @@ nav ul li a {
     }
 
     .content p {
-        margin: 15px auto 25px;
+        margin: 12px auto 18px;
         max-width: 450px;
         font-size: 14px;
         line-height: 1.5;
