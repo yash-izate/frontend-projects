@@ -1329,3 +1329,467 @@ header.header_scrolled {
     }
 
 }
+
+/* =========================================================
+   IMPROVED FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: 70px;
+    background-color: #fafbfc;
+    color: #282c3f;
+}
+
+
+/* =========================
+   MAIN FOOTER
+   ========================= */
+
+.footer_container {
+    padding: 55px 7% 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1.2fr
+        1.5fr;
+
+    gap: 50px;
+
+    background-color: #fafbfc;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+.footer_column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer_column h3 {
+    color: #282c3f;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    margin-bottom: 22px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.footer_column:hover h3 {
+    color: #ff3f6c;
+    transform: translateX(3px);
+}
+
+
+.footer_column a {
+    width: fit-content;
+
+    color: #696b79;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    padding-bottom: 9px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.footer_column a:hover {
+    color: #ff3f6c;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   APP SECTION
+   ========================= */
+
+.footer_text {
+    color: #696b79;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    max-width: 280px;
+
+    margin-bottom: 20px;
+}
+
+
+.app_buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 28px;
+}
+
+
+.app_button {
+    width: 175px;
+
+    min-height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 7px 12px;
+
+    background-color: #282c3f;
+
+    color: #ffffff !important;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    transform: none !important;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.app_button:hover {
+    background-color: #ff3f6c;
+
+    transform: translateY(-3px) !important;
+
+    box-shadow:
+        0 7px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+.app_button .material-symbols-outlined {
+    font-size: 25px;
+}
+
+
+.app_button span:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.app_button small {
+    font-size: 8px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================
+   SOCIAL MEDIA
+   ========================= */
+
+.follow_heading {
+    margin-bottom: 12px !important;
+}
+
+
+.social_icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.social_icons a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 50%;
+
+    color: #696b79;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.social_icons a:hover {
+    color: #ffffff;
+
+    background-color: #ff3f6c;
+
+    border-color: #ff3f6c;
+
+    transform: translateY(-4px);
+}
+
+
+.social_icons .material-symbols-outlined {
+    font-size: 19px;
+}
+
+
+/* =========================
+   SERVICE / TRUST SECTION
+   ========================= */
+
+.footer_services {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 28px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.service_item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #696b79;
+}
+
+
+.service_item > .material-symbols-outlined {
+    font-size: 30px;
+
+    color: #ff3f6c;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.service_item:hover > .material-symbols-outlined {
+    transform: scale(1.15);
+}
+
+
+.service_item div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.service_item strong {
+    color: #282c3f;
+
+    font-size: 12px;
+
+    letter-spacing: 0.04em;
+}
+
+
+.service_item span {
+    font-size: 12px;
+}
+
+
+/* =========================
+   FOOTER HR
+   ========================= */
+
+footer hr {
+    border: none;
+
+    border-top: 1px solid #e5e5e5;
+
+    margin: 0;
+}
+
+
+/* =========================
+   COPYRIGHT
+   ========================= */
+
+.copyright {
+    color: #94969f;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    padding: 18px 15px;
+}
+
+
+/* =========================================================
+   FOOTER - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .footer_container {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 40px 50px;
+
+        padding: 45px 7%;
+    }
+
+    .footer_highlight {
+        grid-column: span 2;
+    }
+
+    .app_buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer_services {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer_container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px 25px;
+
+        padding: 40px 25px;
+    }
+
+
+    .footer_highlight {
+        grid-column: span 2;
+    }
+
+
+    .footer_column h3 {
+        font-size: 12px;
+
+        margin-bottom: 17px;
+    }
+
+
+    .footer_column a {
+        font-size: 13px;
+
+        padding-bottom: 8px;
+    }
+
+
+    .footer_text {
+        font-size: 13px;
+    }
+
+
+    .app_buttons {
+        flex-direction: column;
+    }
+
+
+    .footer_services {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+
+        gap: 22px;
+    }
+
+
+    .service_item {
+        width: 100%;
+    }
+
+
+    .copyright {
+        font-size: 11px;
+
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .footer_container {
+        padding: 35px 18px;
+
+        gap: 30px 15px;
+    }
+
+
+    .footer_column a {
+        font-size: 12px;
+    }
+
+
+    .app_button {
+        width: 165px;
+    }
+
+}
+
