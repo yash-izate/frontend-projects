@@ -1,8 +1,21 @@
+:root {
+    --gradient-primary: linear-gradient(45deg, #df4881, #c430d7);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 .hero {
@@ -16,15 +29,26 @@
     position: relative;
 }
 
+/* =========================
+   NAVIGATION
+   ========================= */
+
 nav {
     padding: 10px 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .logo {
     width: 140px;
+}
+
+nav ul {
+    text-align: center;
 }
 
 nav ul li {
@@ -51,27 +75,39 @@ nav ul li a {
     text-decoration: none;
     padding: 14px 40px;
     color: #fff;
-    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    background-image: var(--gradient-primary);
     font-size: 14px;
     border-radius: 30px;
     border-top-right-radius: 0;
     transition: 0.5s;
 }
 
+.btn:hover {
+    border-top-right-radius: 30px;
+}
+
+/* =========================
+   HERO CONTENT
+   ========================= */
+
 .content {
     margin-top: 10%;
     max-width: 600px;
+    position: relative;
+    z-index: 2;
 }
 
 .content h1 {
     font-size: 70px;
     color: #222;
+    line-height: 1.1;
 }
 
 .content p {
     margin: 10px 0 30px;
     color: #333;
     animation-delay: 0.5s;
+    line-height: 1.4;
 }
 
 .content .btn {
@@ -80,20 +116,25 @@ nav ul li a {
     animation-delay: 1s;
 }
 
-.btn:hover {
-    border-top-right-radius: 30px;
-}
+/* =========================
+   HERO IMAGE
+   ========================= */
 
 .feature-img {
-    width: 530px;
+    width: 450px;
     position: absolute;
     bottom: 0;
     right: 10%;
+    z-index: 1;
 }
 
 .feature-img.anim {
     animation-delay: 1.5s;
 }
+
+/* =========================
+   ANIMATION
+   ========================= */
 
 .anim {
     opacity: 0;
@@ -102,8 +143,278 @@ nav ul li a {
 }
 
 @keyframes moveup {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   TABLET
+   769px - 1100px
+   ======================================== */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        padding: 10px 6%;
+    }
+
+    .logo {
+        width: 125px;
+    }
+
+    nav ul li {
+        margin: 10px 8px;
+    }
+
+    .login-btn {
+        margin-right: 10px;
+    }
+
+    .btn {
+        padding: 12px 28px;
+    }
+
+    .content {
+        margin-top: 12%;
+        max-width: 500px;
+    }
+
+    .content h1 {
+        font-size: 58px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+
+    .content .btn {
+        padding: 14px 60px;
+    }
+
+    .feature-img {
+        width: 380px;
+        right: 5%;
+    }
+}
+
+
+/* ========================================
+   SMALL TABLET
+   601px - 768px
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 10px 5%;
+        min-height: 100vh;
+    }
+
+    nav {
+        grid-template-columns: auto auto;
+        row-gap: 10px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    nav ul {
+        grid-column: 1 / -1;
+        order: 3;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    nav > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .login-btn {
+        margin-right: 10px;
+    }
+
+    .btn {
+        padding: 11px 24px;
+        font-size: 13px;
+    }
+
+    .content {
+        margin-top: 10%;
+        max-width: 55%;
+    }
+
+    .content h1 {
+        font-size: 48px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .content .btn {
+        padding: 13px 45px;
+        font-size: 14px;
+    }
+
+    .feature-img {
+        width: 340px;
+        right: 0;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+   600px and below
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 100vh;
+        padding: 15px 6%;
+        background-position: center;
+    }
+
+    /* Navigation */
+
+    nav {
+        padding: 5px 0;
+        grid-template-columns: auto auto;
+    }
+
+    .logo {
+        width: 115px;
+    }
+
+    nav > div {
+        gap: 8px;
+    }
+
+    .login-btn {
+        margin-right: 0;
+        font-size: 13px;
+    }
+
+    nav .btn {
+        padding: 9px 18px;
+        font-size: 12px;
+    }
+
+    nav ul {
+        grid-column: 1 / -1;
+        order: 3;
+        margin-top: 5px;
+    }
+
+    nav ul li {
+        margin: 5px 7px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    /* Hero content */
+
+    .content {
+        margin-top: 12%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 44px;
+        line-height: 1.1;
+    }
+
+    .content p {
+        margin: 15px auto 25px;
+        max-width: 450px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .content .btn {
+        padding: 13px 50px;
+        font-size: 14px;
+    }
+
+    /* Hero image */
+
+    .feature-img {
+        position: relative;
+        display: block;
+        width: min(85%, 350px);
+        right: auto;
+        bottom: auto;
+        margin: 40px auto 0;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+   400px and below
+   ======================================== */
+
+@media (max-width: 400px) {
+
+    .hero {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .login-btn {
+        font-size: 12px;
+    }
+
+    nav .btn {
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+
+    nav ul li {
+        margin: 4px 5px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .content {
+        margin-top: 15%;
+    }
+
+    .content h1 {
+        font-size: 38px;
+    }
+
+    .content p {
+        font-size: 13px;
+    }
+
+    .content .btn {
+        padding: 12px 40px;
+    }
+
+    .feature-img {
+        width: 90%;
+        margin-top: 35px;
     }
 }
